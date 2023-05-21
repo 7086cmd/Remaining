@@ -13,7 +13,7 @@ function App() {
     const interval = setInterval(() => {
       const now = new Date();
       const june16 = new Date("June 16, 2023 00:00:00");
-      const daysUntilJune16 = Math.ceil(
+      const daysUntilJune16 = Math.floor(
         (june16.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
       );
       setCountdown(`中考倒计时：${daysUntilJune16}天`);
