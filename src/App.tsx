@@ -16,7 +16,7 @@ function App() {
       const daysUntilJune16 = Math.floor(
         (june16.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
       );
-      setCountdown(`中考倒计时：${daysUntilJune16}天`);
+      setCountdown(`中考剩余：${daysUntilJune16}天`);
 
       const june16Chinese = new Date("June 16, 2023 08:30:00");
       const timeUntilJune16Chinese = getTimeUntil(june16Chinese, now);
@@ -40,7 +40,7 @@ function App() {
       const june17Science = new Date("June 17, 2023 15:00:00");
       const timeUntilJune17Science = getTimeUntil(june17Science, now);
       setScience(`科学：${timeUntilJune17Science}`);
-    }, 800);
+    }, 80);
 
     return () => clearInterval(interval);
   }, []);
@@ -57,7 +57,7 @@ function App() {
       .toString()
       .padStart(2, "0")}小时${minutes
       .toString()
-      .padStart(2, "0")}分钟${seconds.toString().padStart(2, "0")}秒`;
+      .padStart(2, "0")}分钟`;
   }
 
   return (
